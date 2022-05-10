@@ -13,7 +13,7 @@ the controller of these APIs can be found in src/app.js
 
 to run this application please follow these steps
   1) npm install(for one time only)
-  2) npm mojobox(to start the server)
+  2) npm run mojobox(to start the server)
 
 
 # Use Postman to test these APIs
