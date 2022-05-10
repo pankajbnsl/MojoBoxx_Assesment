@@ -1,0 +1,47 @@
+
+    <%- include('partials/header'); %>
+<link rel="stylesheet" href="/css/register.css">
+<body>
+  <%- include('partials/navbar'); %>
+  <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <form action="/register" method="POST">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" name="fullName" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Age</span>
+              <input type="number" name="age" placeholder="Enter your age" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <input type="password" name="cpassword" placeholder="Again Enter your password" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Department</span>
+              <input type="text" name="department" placeholder="Department" required>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+
+
+
+
+  

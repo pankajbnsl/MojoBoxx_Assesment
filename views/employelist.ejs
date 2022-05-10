@@ -1,0 +1,49 @@
+<%- include('partials/header'); %>
+<link rel="stylesheet" href="/css/employelist.css">
+<header id="header">
+    <nav>
+        <div class="container">
+            <div class="text-center">
+                <a href="/" class="nav-brand text-dark">Employee List</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="site-main">
+    <div class="container">
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i < users.length; i++) { %>  
+                        <tr>
+                            <td><%=i+1%></td>
+                            <td><%=users[i].fullName%></td>
+                            <td><%=users[i].age%></td>
+                            <td><%=users[i].email%></td>
+                            <td><%=users[i].department%></td>
+                            <td>
+                                <a href="/update-employee?id=<%= users[i]._id%>" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a href="/delete-employee?id=<%= users[i]._id%>" class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                            </td>
+                        </tr>   
+                    <%}%>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,33 @@
+<%- include('partials/header'); %>
+<link rel="stylesheet" href="/css/register.css">
+<body>
+  <div class="container">
+      <div class="title">Update </div>
+      <div class="content">
+        <form action="/update-employee" method="POST">
+          <div class="user-details">
+            <div class="input-box">
+                <input type="hidden" name = "id" value="<%=employee._id%>">
+              <span class="details">Full Name</span>
+              <input type="text" name="fullName" placeholder="Enter your name" required value="<%=employee.fullName%>">
+            </div>
+            <div class="input-box">
+              <span class="details">Age</span>
+              <input type="number" name="age" placeholder="Enter your age" required value="<%=employee.age%>">
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="email" name="email" placeholder="Enter your email" required value="<%=employee.email%>">
+            </div>
+            <div class="input-box">
+              <span class="details">Department</span>
+              <input type="text" name="department" placeholder="Department" required value="<%=employee.department%>">
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Update">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
